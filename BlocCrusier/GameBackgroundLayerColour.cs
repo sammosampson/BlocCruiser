@@ -56,8 +56,10 @@ namespace BlocCrusier
     {
         public override void Draw()
         {
+            CCDrawingPrimitives.Begin();
+            CCDrawingPrimitives.DrawSolidRect(new CCPoint(0 ,0), new CCPoint(-100, -100), Colour.Red);
+            CCDrawingPrimitives.End();
             base.Draw();
-            CCDrawingPrimitives.DrawSolidRect(Position, Position, Colour.Red);
         }
     }
 }
