@@ -2,11 +2,11 @@ using Cocos2D;
 
 namespace BlocCrusier
 {
-    public class IntroScene : CCScene
+    public class GameScene : CCScene
     {
-        public IntroScene()
+        public GameScene()
         {
-            AddChild(new IntroLayer());
+            AddChild(new GameBackgroundLayerColour());
         }
     }
 }

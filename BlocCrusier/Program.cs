@@ -28,7 +28,6 @@ namespace BlocCrusier
             frameLayout.AddView(game.Window);
             this.SetContentView(frameLayout);
 
-            //SetContentView(game.Window);
             game.Run(GameRunBehavior.Asynchronous);
         }
     }

@@ -30,7 +30,7 @@ namespace BlocCrusier
             CCDrawManager.SetDesignResolutionSize(PreferredWidth, PreferredHeight, CCResolutionPolicy.ShowAll);
             CCDirector.SharedDirector.DisplayStats = true;
             CCDirector.SharedDirector.AnimationInterval = 1.0 / 60;
-            CCDirector.SharedDirector.RunWithScene(new IntroScene());
+            CCDirector.SharedDirector.RunWithScene(new GameScene());
             
             return true;
         }
