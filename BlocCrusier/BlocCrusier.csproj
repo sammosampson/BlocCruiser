@@ -71,11 +71,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntroScene.cs" />
     <Compile Include="Program.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="BlocCruiserApplication.cs" />
+    <Compile Include="BlocCruiserGame.cs" />
     <Compile Include="IntroLayer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
