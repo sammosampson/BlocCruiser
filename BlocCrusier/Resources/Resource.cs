@@ -11,7 +11,7 @@
 
 [assembly: global::Android.Runtime.ResourceDesignerAttribute("BlocCrusier.Resource", IsApplication=true)]
 
-namespace BlocCrusier
+namespace BlocCrusier.Resources
 {
 	
 	
@@ -26,8 +26,6 @@ namespace BlocCrusier
 		
 		public static void UpdateIdValues()
 		{
-			global::SystemDot.Storage.Changes.Sqlite.Resource.String.ApplicationName = global::BlocCrusier.Resource.String.ApplicationName;
-			global::SystemDot.Storage.Changes.Sqlite.Resource.String.Hello = global::BlocCrusier.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

@@ -12,8 +12,8 @@ namespace BlocCrusier
         {
             s_pSharedApplication = this;
             
-            graphics.PreferredBackBufferWidth = PreferredWidth;
-            graphics.PreferredBackBufferHeight = PreferredHeight;
+            //graphics.PreferredBackBufferWidth = (int)CCDirector.SharedDirector.WinSize.Width;
+            //graphics.PreferredBackBufferHeight = (int)CCDirector.SharedDirector.WinSize.Height;
 
             CCDrawManager.InitializeDisplay(
                 game,

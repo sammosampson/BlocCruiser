@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip />
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -61,28 +64,66 @@
       <HintPath>..\packages\Cocos2D-XNA.Android.1.3.0.2\lib\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OpenTK" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="SystemDot">
+      <HintPath>..\packages\SystemDotCore.1.3.2\lib\MonoAndroid\SystemDot.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Android">
+      <HintPath>..\packages\SystemDotCore.1.3.2\lib\MonoAndroid\SystemDot.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Storage.Changes.Sql.Android">
+      <HintPath>..\packages\SystemDotCore.1.3.2\lib\MonoAndroid\SystemDot.Storage.Changes.Sql.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemDot.Storage.Changes.Sqlite.Android">
+      <HintPath>..\packages\SystemDotCore.1.3.2\lib\MonoAndroid\SystemDot.Storage.Changes.Sqlite.Android.dll</HintPath>
+    </Reference>
     <Reference Include="zlib.net">
       <HintPath>..\packages\Cocos2D-XNA.Android.1.3.0.2\lib\zlib.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityIdentifier.cs" />
+    <Compile Include="GameMessenger.cs" />
+    <Compile Include="Physics\b2BodyExtensions.cs" />
+    <Compile Include="Physics\b2WorldExtensions.cs" />
+    <Compile Include="Physics\Density.cs" />
+    <Compile Include="Physics\MetresVector.cs" />
+    <Compile Include="ObjectPooling\ObjectPool.cs" />
+    <Compile Include="ObjectPooling\ObjectPoolStack.cs" />
+    <Compile Include="Physics\Box2dDebugRenderer.cs" />
+    <Compile Include="Drawing\Colour.cs" />
+    <Compile Include="Physics\ContactListener.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="GameScene.cs" />
+    <Compile Include="GameWorld.cs" />
+    <Compile Include="Physics\Gravity.cs" />
+    <Compile Include="Physics\WorldBox.cs" />
+    <Compile Include="Drawing\Opacity.cs" />
+    <Compile Include="Physics\PhysicsBodyMoved.cs" />
+    <Compile Include="Physics\PhysicsWorld.cs" />
+    <Compile Include="Physics\Radians.cs" />
+    <Compile Include="Physics\WorldSize.cs" />
+    <Compile Include="PointsSize.cs" />
     <Compile Include="Program.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BlocCruiserApplication.cs" />
     <Compile Include="BlocCruiserGame.cs" />
-    <Compile Include="GameBackgroundLayerColour.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="GameBackground.cs" />
+    <Compile Include="Resources\Resource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-22.xnb" />
+    <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-16.xnb" />
+    <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-18.xnb" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
