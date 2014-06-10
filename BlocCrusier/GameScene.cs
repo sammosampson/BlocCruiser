@@ -10,7 +10,7 @@ namespace BlocCrusier
             AddChild(new GameWorld(GetWorldSize(CCDirector.SharedDirector.WinSize)));
         }
 
-        WorldSize GetWorldSize(PointsSize screenSize)
+        WorldSize GetWorldSize(PointSize screenSize)
         {
             return new WorldSize(screenSize);
         }

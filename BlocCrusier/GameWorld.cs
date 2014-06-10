@@ -1,4 +1,5 @@
 using BlocCrusier.Drawing;
+using BlocCrusier.Entities.Player;
 using BlocCrusier.Physics;
 using Cocos2D;
 

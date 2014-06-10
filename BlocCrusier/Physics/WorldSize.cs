@@ -2,29 +2,29 @@ namespace BlocCrusier.Physics
 {
     public struct WorldSize
     {
-        MetresVector worldSize;
+        MetreVector worldSize;
 
-        public MetresVector TopLeft
+        public MetreVector TopLeft
         {
             get { return worldSize.WithX(-4); }
         }
 
-        public MetresVector TopRight
+        public MetreVector TopRight
         {
             get { return worldSize; }
         }
 
-        public MetresVector BottomLeft
+        public MetreVector BottomLeft
         {
-            get { return MetresVector.Zero.WithX(-4); }
+            get { return MetreVector.Zero.WithX(-4); }
         }
 
-        public MetresVector BottomRight
+        public MetreVector BottomRight
         {
             get { return worldSize.WithZeroY(); }
         }
 
-        public WorldSize(PointsSize screenSize)
+        public WorldSize(PointSize screenSize)
         {
             worldSize = (screenSize * 4).ToMetres();
         }

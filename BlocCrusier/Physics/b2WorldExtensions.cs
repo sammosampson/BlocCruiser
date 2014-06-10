@@ -6,7 +6,7 @@ namespace BlocCrusier.Physics
     {
         public static b2Body CreateBodyAtZeroPosition(this b2World world)
         {
-            return world.CreateBody(new b2BodyDef { position = MetresVector.Zero });
+            return world.CreateBody(new b2BodyDef { position = MetreVector.Zero });
         }
     }
 }

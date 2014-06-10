@@ -89,18 +89,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityIdentifier.cs" />
+    <Compile Include="Entities\Shapes\BoxShape.cs" />
+    <Compile Include="Physics\DynamicBody.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityIdentifier.cs" />
+    <Compile Include="Entities\IEntityIdentifier.cs" />
     <Compile Include="GameMessenger.cs" />
     <Compile Include="Physics\b2BodyExtensions.cs" />
     <Compile Include="Physics\b2WorldExtensions.cs" />
     <Compile Include="Physics\Density.cs" />
-    <Compile Include="Physics\MetresVector.cs" />
+    <Compile Include="Physics\MetreVector.cs" />
     <Compile Include="ObjectPooling\ObjectPool.cs" />
     <Compile Include="ObjectPooling\ObjectPoolStack.cs" />
     <Compile Include="Physics\Box2dDebugRenderer.cs" />
     <Compile Include="Drawing\Colour.cs" />
     <Compile Include="Physics\ContactListener.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Entities\Player\Player.cs" />
     <Compile Include="GameScene.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Physics\Gravity.cs" />
@@ -110,7 +114,9 @@
     <Compile Include="Physics\PhysicsWorld.cs" />
     <Compile Include="Physics\Radians.cs" />
     <Compile Include="Physics\WorldSize.cs" />
-    <Compile Include="PointsSize.cs" />
+    <Compile Include="Entities\Player\PlayerEntityIdentifier.cs" />
+    <Compile Include="PointVector.cs" />
+    <Compile Include="PointSize.cs" />
     <Compile Include="Program.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -1,6 +1,6 @@
 using SystemDot.Core;
+using BlocCrusier.Entities;
 using Box2D.Dynamics;
-using Cocos2D;
 
 namespace BlocCrusier.Physics
 {
@@ -47,7 +47,7 @@ namespace BlocCrusier.Physics
         static void NotifyMovementOfPhysicsBody(b2Body body)
         {
             GameMessenger.Send<PhysicsBodyMoved>(
-                body.UserData.As<EntityIdentifier>(),
+                body.UserData.As<IEntityIdentifier>(),
                 message =>
                 {
                     message.Position = body.Position;
