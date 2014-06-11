@@ -98,6 +98,7 @@
     <Compile Include="Physics\b2BodyExtensions.cs" />
     <Compile Include="Physics\b2WorldExtensions.cs" />
     <Compile Include="Physics\Density.cs" />
+    <Compile Include="Physics\MetreSize.cs" />
     <Compile Include="Physics\MetreVector.cs" />
     <Compile Include="ObjectPooling\ObjectPool.cs" />
     <Compile Include="ObjectPooling\ObjectPoolStack.cs" />
@@ -115,8 +116,8 @@
     <Compile Include="Physics\Radians.cs" />
     <Compile Include="Physics\WorldSize.cs" />
     <Compile Include="Entities\Player\PlayerEntityIdentifier.cs" />
-    <Compile Include="PointVector.cs" />
     <Compile Include="PointSize.cs" />
+    <Compile Include="PointVector.cs" />
     <Compile Include="Program.cs">
       <SubType>Code</SubType>
     </Compile>

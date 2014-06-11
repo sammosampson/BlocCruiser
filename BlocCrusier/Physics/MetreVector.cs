@@ -27,7 +27,7 @@ namespace BlocCrusier.Physics
         {
         }
 
-        MetreVector(b2Vec2 vector)
+        public MetreVector(b2Vec2 vector)
         {
             this.vector = vector;
         }

@@ -9,16 +9,15 @@ namespace BlocCrusier.Entities.Shapes
     {
         readonly TEntityIdentifier identifier;
         readonly PointVector bottomRight;
-        readonly CCPoint topLeft;
+        readonly Colour colour;
 
-        public BoxShape(TEntityIdentifier identifier)
+        public BoxShape(TEntityIdentifier identifier, PointSize size, Colour colour)
         {
             this.identifier = identifier;
+            this.colour = colour;
+            bottomRight = size.ToVector();
 
             Position = CCDirector.SharedDirector.WinSize.Center;
-            
-            topLeft = CCPoint.Zero;
-            bottomRight = new PointVector(-100, -100);
             
             GameMessenger.RegisterHandler<PhysicsBodyMoved>(
                 GetIdentifier(), 
@@ -34,8 +33,9 @@ namespace BlocCrusier.Entities.Shapes
         public override void Draw()
         {
             CCDrawingPrimitives.Begin();
-            CCDrawingPrimitives.DrawSolidRect(topLeft, bottomRight, Colour.Red);
+            CCDrawingPrimitives.DrawSolidRect(PointVector.Zero, bottomRight, colour);
             CCDrawingPrimitives.End();
+
             base.Draw();
         }
 

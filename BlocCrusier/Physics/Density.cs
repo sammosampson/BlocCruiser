@@ -7,6 +7,11 @@ namespace BlocCrusier.Physics
             get { return new Density(0); }
         }
 
+        public static Density HeftyBox
+        {
+            get { return new Density(1); }
+        }
+
         public static implicit operator int (Density from)
         {
             return from.density;

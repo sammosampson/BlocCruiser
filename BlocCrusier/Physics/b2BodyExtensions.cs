@@ -6,6 +6,11 @@ namespace BlocCrusier.Physics
 {
     public static class b2BodyExtensions
     {
+        public static void AttachBoxFixture(this b2Body body, MetreSize size, Density density)
+        {
+            body.AttachBoxFixture(MetreVector.Zero, size.ToVector(), density);
+        }
+
         public static void AttachBoxFixture(this b2Body body, MetreVector @from, MetreVector to, Density density)
         {
             var boxShape = ObjectPool.Get<b2EdgeShape>();

@@ -1,19 +1,20 @@
 using BlocCrusier.Physics;
+using Box2D.Common;
 using Cocos2D;
 
 namespace BlocCrusier
 {
     public struct PointSize
     {
-        readonly CCSize size;
+        readonly CCSize value;
 
         public PointSize(float width, float height) : this(new CCSize(width, height))
         {
         }
 
-        PointSize(CCSize size)
+        PointSize(CCSize value)
         {
-            this.size = size;
+            this.value = value;
         }
 
         public static implicit operator PointSize(CCSize from)
@@ -23,18 +24,23 @@ namespace BlocCrusier
 
         public static PointSize operator *(PointSize toMultiply, int multiplier)
         {
-            return new PointSize(toMultiply.size * multiplier);
+            return new PointSize(toMultiply.value * multiplier);
         }
 
         public static implicit operator CCSize(PointSize from)
         {
-            return from.size;
+            return from.value;
         }
 
-        public MetreVector ToMetres()
+        public PointVector ToVector()
         {
-            CCSize metresSize = size * MetreVector.PointsToMetresRatio;
-            return new MetreVector(metresSize.Width, metresSize.Height);
+            return new PointVector(value.Width, value.Height);
+        }
+
+        public MetreSize ToMetres()
+        {
+            CCSize metreSize = value * MetreVector.PointsToMetresRatio;
+            return new MetreSize(metreSize.Width, metreSize.Height);
         }
     }
 }

@@ -6,6 +6,11 @@ namespace BlocCrusier
     {
         readonly CCPoint point;
 
+        public static PointVector Zero
+        {
+            get { return new PointVector(0, 0); }
+        }
+
         public PointVector(float width, float height)
             : this(new CCPoint(width, height))
         {

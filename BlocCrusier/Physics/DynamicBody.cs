@@ -8,17 +8,18 @@ namespace BlocCrusier.Physics
         where TEntityIdentifier : IEntityIdentifier
     {
         readonly TEntityIdentifier identifier;
+        readonly b2Body body;
 
-        public DynamicBody(TEntityIdentifier identifier)
+        public DynamicBody(
+            TEntityIdentifier identifier, 
+            MetreVector position, 
+            MetreSize size,
+            Density density)
         {
             this.identifier = identifier;
-            b2Body body = PhysicsWorld.SharedPhysicsWorld.CreateBody(
-                new b2BodyDef
-                {
-                    type = b2BodyType.b2_dynamicBody
-                });
-            body.AttachBoxFixture();
-            
+
+            body = PhysicsWorld.SharedPhysicsWorld.CreateDynamicBody(identifier, position);
+            body.AttachBoxFixture(size, density);
         }
 
         public TEntityIdentifier GetIdentifier()
