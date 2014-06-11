@@ -4,24 +4,22 @@ using Cocos2D;
 
 namespace BlocCrusier.Entities.Shapes
 {
-    public class BoxShape<TEntityIdentifier> : CCNode, Entity<TEntityIdentifier>
-        where TEntityIdentifier : IEntityIdentifier
+    public class BoxShape : CCNode, Entity
     {
-        readonly TEntityIdentifier identifier;
         readonly PointVector bottomRight;
         readonly Colour colour;
+        
+        public EntityIdentifier Identifier { get; set; }
 
-        public BoxShape(TEntityIdentifier identifier, PointSize size, Colour colour)
+        public BoxShape(EntityIdentifier identifier, PointSize size, Colour colour)
         {
-            this.identifier = identifier;
+            Identifier = identifier;
             this.colour = colour;
             bottomRight = size.ToVector();
 
             Position = CCDirector.SharedDirector.WinSize.Center;
             
-            GameMessenger.RegisterHandler<PhysicsBodyMoved>(
-                GetIdentifier(), 
-                OnPhysicsBodyMoved);
+            GameMessenger.RegisterHandler<PhysicsBodyMoved>(Identifier, OnPhysicsBodyMoved);
         }
 
         void OnPhysicsBodyMoved(PhysicsBodyMoved @event)
@@ -37,11 +35,6 @@ namespace BlocCrusier.Entities.Shapes
             CCDrawingPrimitives.End();
 
             base.Draw();
-        }
-
-        public TEntityIdentifier GetIdentifier()
-        {
-            return identifier;
         }
     }
 }

@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Shapes\BoxShape.cs" />
-    <Compile Include="Physics\DynamicBody.cs" />
+    <Compile Include="Physics\DynamicBoxBody.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\EntityIdentifier.cs" />
     <Compile Include="Entities\IEntityIdentifier.cs" />

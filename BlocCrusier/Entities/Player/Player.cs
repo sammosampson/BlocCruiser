@@ -5,22 +5,18 @@ using Cocos2D;
 
 namespace BlocCrusier.Entities.Player
 {
-    public class Player : CCNode, Entity<PlayerEntityIdentifier>
+    public class Player : CCNode, Entity
     {
-        readonly PlayerEntityIdentifier identifier;
+        public EntityIdentifier Identifier { get; set; }
 
         public Player()
         {
-            identifier = new PlayerEntityIdentifier();
-            var size = new MetreSize(1, 1);
-            var position = new MetreVector(0, 0);
-            AddChild(new DynamicBody<PlayerEntityIdentifier>(GetIdentifier(), position, size, Density.HeftyBox));
-            AddChild(new BoxShape<PlayerEntityIdentifier>(GetIdentifier(),size.ToPoints(), Colour.Red));
-        }
+            Identifier = new PlayerEntityIdentifier();
 
-        public PlayerEntityIdentifier GetIdentifier()
-        {
-            return identifier;
+            var size = new MetreSize(1, 1);
+            var position = MetreVector.Zero;
+            AddChild(new DynamicBoxBody(Identifier, position, size, Density.HeftyBox));
+            AddChild(new BoxShape(Identifier, size.ToPoints(), Colour.Red));
         }
     }
 }

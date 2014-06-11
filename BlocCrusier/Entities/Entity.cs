@@ -1,7 +1,7 @@
 namespace BlocCrusier.Entities
 {
-    public interface Entity<out TEntityIdentifier> where TEntityIdentifier : IEntityIdentifier
+    public interface Entity
     {
-        TEntityIdentifier GetIdentifier();
+        EntityIdentifier Identifier { get; set; }
     }
 }
