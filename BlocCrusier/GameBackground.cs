@@ -1,4 +1,5 @@
 using BlocCrusier.Drawing;
+using BlocCrusier.Entities.Player;
 using Cocos2D;
 
 namespace BlocCrusier
@@ -9,7 +10,8 @@ namespace BlocCrusier
         {
             SetColour();
             SetOpacity();
-
+            AddChild(new CCSprite("background_hills.png"));
+            AddChild(new Player());
         }
 
         void SetColour()

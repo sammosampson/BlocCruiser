@@ -1,5 +1,3 @@
-using BlocCrusier.Drawing;
-using BlocCrusier.Entities.Player;
 using BlocCrusier.Physics;
 using Cocos2D;
 
@@ -11,7 +9,6 @@ namespace BlocCrusier
         {
             AddChild(new GameBackground());
             AddChild(new WorldBox(worldSize));
-            AddChild(new Player());
         }
 
         public override void Update(float dt)
