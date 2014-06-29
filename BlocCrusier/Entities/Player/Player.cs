@@ -14,8 +14,6 @@ namespace BlocCrusier.Entities.Player
             Identifier = new PlayerEntityIdentifier();
 
             var size = new MetreSize(1, 1);
-            var position = MetreVector.Zero;
-            AddChild(new DynamicBoxBody(Identifier, position, size, Density.HeftyBox));
             AddChild(new BoxShape(Identifier, size.ToPoints(), Colour.Red));
         }
     }

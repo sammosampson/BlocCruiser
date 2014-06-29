@@ -131,9 +131,6 @@
     <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-22.xnb" />
     <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-16.xnb" />
     <AndroidAsset Include="Assets\Content\fonts\MarkerFelt-18.xnb" />
-    <AndroidAsset Include="Assets\Content\background_hills.xnb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

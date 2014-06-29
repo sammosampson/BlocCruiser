@@ -10,7 +10,6 @@ namespace BlocCrusier
         {
             SetColour();
             SetOpacity();
-            AddChild(new CCSprite("background_hills.png"));
             AddChild(new Player());
         }
 

@@ -18,14 +18,6 @@ namespace BlocCrusier.Entities.Shapes
             bottomRight = size.ToVector();
 
             Position = CCDirector.SharedDirector.WinSize.Center;
-            
-            GameMessenger.RegisterHandler<PhysicsBodyMoved>(Identifier, OnPhysicsBodyMoved);
-        }
-
-        void OnPhysicsBodyMoved(PhysicsBodyMoved @event)
-        {
-            Position = @event.Position.ToPoints();
-            Rotation = @event.Rotation.ToDegrees();
         }
 
         public override void Draw()
